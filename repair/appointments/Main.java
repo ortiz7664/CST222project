@@ -4,6 +4,6 @@ package repair.appointments;
 
 public class Main {
     public static void main(String[] args) {
-	// CODE HERE
+        InitialValues.create();  // Creates dummy data so we can test the program
     }
 }

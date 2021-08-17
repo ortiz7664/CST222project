@@ -2,5 +2,5 @@
 
 package repair.appointments;
 
-public class Tasks {
+public class Task {
 }
