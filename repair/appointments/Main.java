@@ -17,6 +17,7 @@ public class Main {
     // Take input from the user
     private static Scanner keyboard = new Scanner(System.in);
 
+    // Enter the program
     public static void main(String[] args) {
         homeScreen();
     }
