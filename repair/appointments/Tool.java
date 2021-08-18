@@ -1,7 +1,8 @@
 /*This class stores tool objects which contain the tool's name and description.
 * Getters and setters can be used to modify the object attributes.
 * The display() function outputs name and description to the command line.
-* Written by Bryan Bezerra*/
+* Written by Bryan Bezerra.
+*/
 
 package repair.appointments;
 
@@ -26,7 +27,7 @@ public class Tool {
     public String getDescription() {
         return description;
     }
-    public void display() {
-        System.out.println(name + ":\t" + description);
+    public String display() {
+        return name + ":\t" + description;
     }
 }

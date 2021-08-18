@@ -1,4 +1,6 @@
-/*This is a CLI interface where the user can choose to view, add, or delete appointments, customers, and tasks.*/
+/*This is a CLI interface where the user can choose to view, add, or delete appointments, customers, and tasks.
+* Written by Bryan Bezerra.
+*/
 
 package repair.appointments;
 import java.util.ArrayList;
@@ -22,7 +24,7 @@ public class Main {
     // Lists all tools currently in memory
     public static void listTools() {
         for(int i = 0; i < tools.size(); ++i) {
-            System.out.println(i + ". " + tools.get(i).getName());
+            System.out.println(i + ". " + tools.get(i).display());
         }
     }
 }
