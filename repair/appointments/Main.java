@@ -123,7 +123,7 @@ public class Main {
     }
     public static void listBookings() {
         for(int i = 0; i < bookings.size(); ++i) {
-            System.out.println(i + ". " + bookings.get(i).display());
+//            System.out.println(i + ". " + bookings.get(i).display());
         }
     }
     // 3. Delete appointment from memory UNFINISHED
@@ -141,7 +141,7 @@ public class Main {
     }
     public static void listClients() {
         for(int i = 0; i < clients.size(); ++i) {
-            System.out.println(i + ". " + clients.get(i).display());
+//            System.out.println(i + ". " + clients.get(i).display());
         }
     }
     // 6. Delete a client from memory UNFINISHED
@@ -159,7 +159,7 @@ public class Main {
     }
     public static void listTasks() {
         for(int i = 0; i < tasks.size(); ++i) {
-            System.out.println(i + ". " + tasks.get(i).display());
+//            System.out.println(i + ". " + tasks.get(i).display());
         }
     }
     // 9. Delete a task from memory UNFINISHED
