@@ -19,6 +19,7 @@ public class Main {
     public static void main(String[] args) {
         homeScreen();
     }
+    // First screen user sees. User can access other parts of the program from here.
     public static void homeScreen(){
         System.out.println("Welcome to the repairs appointment center!");
         System.out.println("Options:");
@@ -35,6 +36,7 @@ public class Main {
         System.out.println("10. Add tool");
         System.out.println("11. View tools");
         System.out.println("12. Delete tool");
+        System.out.println("99. Exit the program");
         System.out.println("----------------");
 
         System.out.print("Choose a number: ");
@@ -66,16 +68,28 @@ public class Main {
             case 10:
                 break;
             case 11:
+                listTools();
                 break;
             case 12:
                 break;
-
-
+            case 99:
+                System.exit(0);
         }
     }
+    // Takes the user back to the home screen
+    public static void returnToHome() {
+        System.out.println("Press enter to return to the home screen or type 'X' to exit.");
+        String response = keyboard.nextLine();
+        if(response.equalsIgnoreCase("x")) {
+            System.exit(0);
+        } else {
+            homeScreen();
+        }
+    }
+    // Access testing
     public static void test() {
         createInitialValues();
-        listTools();
+        returnToHome();
     }
     // Creates dummy data so we can test the program
     public static void createInitialValues() {
@@ -85,10 +99,15 @@ public class Main {
         Tool screwdriver = new Tool("Screwdriver", "Used to turn screws.");
         tools.add(screwdriver);
     }
-    // Lists all tools currently in memory
+    // 10. Add tool to memory
+    public static void addTool() {
+        
+    }
+    // 11. Lists all tools currently in memory
     public static void listTools() {
         for(int i = 0; i < tools.size(); ++i) {
             System.out.println(i + ". " + tools.get(i).display());
         }
+            returnToHome();
     }
 }
