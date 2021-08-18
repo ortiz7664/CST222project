@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class Main {
     // Object arrays to hold data in memory
+    private static ArrayList<Booking> bookings = new ArrayList<Booking>();
     private static ArrayList<Tool> tools = new ArrayList<Tool>();
     private static ArrayList<Client> clients = new ArrayList<Client>();
     private static ArrayList<Task> tasks = new ArrayList<Task>();
@@ -24,12 +25,12 @@ public class Main {
         System.out.println("Welcome to the repairs appointment center!");
         System.out.println("Options:");
         System.out.println("0. Test");
-        System.out.println("1.  Add appointment");
-        System.out.println("2.  View appointments");
-        System.out.println("3.  Delete appointment");
-        System.out.println("4.  Add customer");
-        System.out.println("5.  View customers");
-        System.out.println("6.  Delete customer");
+        System.out.println("1.  Add booking");
+        System.out.println("2.  View bookings");
+        System.out.println("3.  Delete booking");
+        System.out.println("4.  Add client");
+        System.out.println("5.  View clients");
+        System.out.println("6.  Delete client");
         System.out.println("7.  Add task");
         System.out.println("8.  View tasks");
         System.out.println("9.  Delete task");
@@ -48,22 +49,31 @@ public class Main {
                 test();
                 break;
             case 1:
+                addBooking();
                 break;
             case 2:
+                viewBookings();
                 break;
             case 3:
+                removeBooking();
                 break;
             case 4:
+                addClient();
                 break;
             case 5:
+                viewClients();
                 break;
             case 6:
+                removeClient();
                 break;
             case 7:
+                addTask();
                 break;
             case 8:
+                viewTasks();
                 break;
             case 9:
+                removeTask();
                 break;
             case 10:
                 addTool();
@@ -100,6 +110,60 @@ public class Main {
         tools.add(hammer);
         Tool screwdriver = new Tool("Screwdriver", "Used to turn screws.");
         tools.add(screwdriver);
+    }
+    // 1. Add new appointment to memory UNFINISHED
+    public static void addBooking() {
+        returnToHome();
+    }
+    // 2. Lists all appointments currently in memory UNFINISHED
+    public static void viewBookings() {
+        listBookings();
+        returnToHome();
+    }
+    public static void listBookings() {
+        for(int i = 0; i < bookings.size(); ++i) {
+            System.out.println(i + ". " + bookings.get(i).display());
+        }
+    }
+    // 3. Delete appointment from memory UNFINISHED
+    public static void removeBooking() {
+        returnToHome();
+    }
+    // 4. Add new client to memory UNFINISHED
+    public static void addClient() {
+        returnToHome();
+    }
+    // 5. View a list of all clients currently in memory UNFINISHED
+    public static void viewClients() {
+        listClients();
+        returnToHome();
+    }
+    public static void listClients() {
+        for(int i = 0; i < clients.size(); ++i) {
+            System.out.println(i + ". " + clients.get(i).display());
+        }
+    }
+    // 6. Delete a client from memory UNFINISHED
+    public static void removeClient() {
+        returnToHome();
+    }
+    // 7. Add new task to memory UNFINISHED
+    public static void addTask() {
+        returnToHome();
+    }
+    // 8. View tasks which are currently in memory UNFINISHED
+    public static void viewTasks() {
+        listTasks();
+        returnToHome();
+    }
+    public static void listTasks() {
+        for(int i = 0; i < tasks.size(); ++i) {
+            System.out.println(i + ". " + tasks.get(i).display());
+        }
+    }
+    // 9. Delete a task from memory UNFINISHED
+    public static void removeTask() {
+        returnToHome();
     }
     // 10. Add tool to memory
     public static void addTool() {
