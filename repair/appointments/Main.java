@@ -39,7 +39,7 @@ public class Main {
         System.out.println("99. Exit the program");
         System.out.println("----------------");
 
-        System.out.print("Choose a number: ");
+        System.out.print("Choose a number >>> ");
         int choice = keyboard.nextInt();
         keyboard.nextLine();
 
@@ -66,11 +66,13 @@ public class Main {
             case 9:
                 break;
             case 10:
+                addTool();
                 break;
             case 11:
-                listTools();
+                viewTools();
                 break;
             case 12:
+                removeTool();
                 break;
             case 99:
                 System.exit(0);
@@ -78,7 +80,7 @@ public class Main {
     }
     // Takes the user back to the home screen
     public static void returnToHome() {
-        System.out.println("Press enter to return to the home screen or type 'X' to exit.");
+        System.out.print("Press enter to return to the home screen or type 'X' to exit >>> ");
         String response = keyboard.nextLine();
         if(response.equalsIgnoreCase("x")) {
             System.exit(0);
@@ -101,13 +103,33 @@ public class Main {
     }
     // 10. Add tool to memory
     public static void addTool() {
-        
+        System.out.print("Enter tool name >>> ");
+        String name = keyboard.nextLine();
+        System.out.print("Enter tool description >>> ");
+        String description = keyboard.nextLine();
+        Tool newTool = new Tool(name, description);
+        tools.add(newTool);
+        System.out.println("Added " + newTool.getName() + ".");
+        returnToHome();
     }
     // 11. Lists all tools currently in memory
+    public static void viewTools() {
+        listTools();
+        returnToHome();
+    }
     public static void listTools() {
         for(int i = 0; i < tools.size(); ++i) {
             System.out.println(i + ". " + tools.get(i).display());
         }
-            returnToHome();
+    }
+    // 12. Remove a tool from memory
+    public static void removeTool() {
+        listTools();
+        System.out.print("Enter a tool's number to delete it >>> ");
+        int response = keyboard.nextInt();
+        Tool removed = tools.get(response);
+        tools.remove(response);
+        System.out.println("Removed " + removed.getName());
+        returnToHome();
     }
 }
