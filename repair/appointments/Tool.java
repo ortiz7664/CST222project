@@ -1,6 +1,6 @@
 /*This class stores tool objects which contain the tool's name and description.
 * Getters and setters can be used to modify the object attributes.
-* The display() function outputs name and description to the command line.
+* The display() function returns name and description.
 * Written by Bryan Bezerra.
 */
 
